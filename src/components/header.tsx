@@ -16,20 +16,21 @@ export function Header() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60"
+      className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg supports-backdrop-filter:bg-background/60"
     >
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-bold text-xl">
+      <div className="container flex h-20 items-center justify-between">
+        <Link href="/" className="font-bold text-2xl hover:text-primary transition-colors">
           cvsloane
         </Link>
-        <nav className="flex items-center gap-6">
+        <nav className="flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm font-medium text-muted-foreground transition-all hover:text-foreground hover:scale-110 relative group"
             >
               {item.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
             </Link>
           ))}
           <ThemeToggle />
