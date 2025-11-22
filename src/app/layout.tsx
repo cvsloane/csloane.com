@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "Chris Sloane | %s",
   },
   icons: {
-    icon: "/images/signatures/Christopher-Sloane-Initials_black_high-res.png",
+    icon: "/images/signatures/Christopher-Sloane-Initials_white_high-res.png",
   },
   description: "Personal website of cvsloane",
   keywords: ["developer", "portfolio", "blog"],
