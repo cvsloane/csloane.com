@@ -17,7 +17,7 @@ export const businesses: Business[] = [
         year: "Founded 2010",
         website: "https://heaviside.digital",
         tags: ["Digital Marketing", "SEO", "Web Development"],
-        logoUrl: "/images/animated logos/Heaviside.mp4",
+        logoUrl: "/images/animated logos/heaviside.mp4",
         stats: [
             { label: "Reviews", value: "500+" },
             { label: "Experience", value: "14 Years" },
@@ -36,7 +36,7 @@ export const businesses: Business[] = [
         year: "Launched 2020",
         website: "https://pavingmarketers.com",
         tags: ["Niche Marketing", "Paving Industry"],
-        logoUrl: "/images/animated logos/Paving Marketers.mp4",
+        logoUrl: "/images/animated logos/paving-marketers.mp4",
         stats: [
             { label: "Clients", value: "1,000+" },
             { label: "Rating", value: "#1 Agency" },
@@ -55,7 +55,7 @@ export const businesses: Business[] = [
         year: "Launched 2022",
         website: "https://garagedoormarketers.com",
         tags: ["Niche Marketing", "Garage Door Industry"],
-        logoUrl: "/images/animated logos/Garage Marketers.mp4",
+        logoUrl: "/images/animated logos/garage-marketers.mp4",
         stats: [
             { label: "Growth", value: "Rapid" },
             { label: "Focus", value: "100% Niche" },
@@ -74,7 +74,7 @@ export const businesses: Business[] = [
         year: "Launched 2023",
         website: "https://electricianmarketingagency.com",
         tags: ["Niche Marketing", "Electrician Industry"],
-        logoUrl: "/images/animated logos/Electrician Marketers 2.mp4",
+        logoUrl: "/images/animated logos/electrician-marketers-2.mp4",
         stats: [
             { label: "Experience", value: "10+ Years" },
             { label: "Specialty", value: "Electrical" },

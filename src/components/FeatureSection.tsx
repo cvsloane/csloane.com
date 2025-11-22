@@ -42,10 +42,10 @@ export function FeatureSection({
         if (!url) return url;
         
         const logoMap: Record<string, string> = {
-            '/images/animated logos/Heaviside.mp4': '/images/logos/HeavisidelogonewPngfile_small.jpg',
-            '/images/animated logos/Paving Marketers.mp4': '/images/logos/paving-marketers.png',
-            '/images/animated logos/Garage Marketers.mp4': '/images/logos/garage-door-marketers.png',
-            '/images/animated logos/Electrician Marketers 2.mp4': '/images/logos/Electrician-Marketers.png',
+            '/images/animated logos/heaviside.mp4': '/images/logos/HeavisidelogonewPngfile_small.jpg',
+            '/images/animated logos/paving-marketers.mp4': '/images/logos/paving-marketers.png',
+            '/images/animated logos/garage-marketers.mp4': '/images/logos/garage-door-marketers.png',
+            '/images/animated logos/electrician-marketers-2.mp4': '/images/logos/Electrician-Marketers.png',
         };
         
         return logoMap[url] || url;
