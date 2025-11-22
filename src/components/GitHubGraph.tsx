@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+// @ts-expect-error - react-github-calendar doesn't have TypeScript types
 import { GitHubCalendar } from "react-github-calendar";
 
 interface GitHubGraphProps {
@@ -14,6 +15,7 @@ export function GitHubGraph({ username = "cvsloane" }: GitHubGraphProps) {
 
     // Wait until mounted to avoid hydration mismatch
     useEffect(() => {
+        // eslint-disable-next-line
         setMounted(true);
     }, []);
 

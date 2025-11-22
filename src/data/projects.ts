@@ -39,7 +39,7 @@ export const projects: Project[] = [
     description:
       "AI-powered content generation platform designed for modern businesses. Create, manage, and optimize content across multiple clients and campaigns with advanced AI assistance.",
     specs: ["AI", "Content Ops", "SaaS"],
-    logoUrl: "", // No logo file
+    logoUrl: "/images/logos/hg-content.png",
     website: "https://hgcontent.com",
     stats: [
       { label: "Tech", value: "Advanced AI" },
@@ -81,6 +81,7 @@ export const projects: Project[] = [
     description:
       "Multi-tenant website platform for managing 50-100+ WordPress sites with modern technology, enterprise-grade security, and complete multi-tenant isolation.",
     specs: ["Next.js 15", "Supabase", "Multi-tenancy"],
+    logoUrl: "/images/logos/heaviside-platform.png",
     stats: [
       { label: "Scale", value: "100+ Sites" },
       { label: "Tech", value: "Modern Stack" },
@@ -99,6 +100,7 @@ export const projects: Project[] = [
     description:
       "Real-time freight rail monitoring and visualization platform for the United States. Processes high-volume data streams to visualize network status.",
     specs: ["Real-time", "Geospatial", "WebSocket"],
+    logoUrl: "/images/logos/freightrail-pulse.png",
     stats: [
       { label: "Data", value: "High-Volume" },
       { label: "Type", value: "Real-time" },
@@ -119,10 +121,21 @@ export const projects: Project[] = [
     description:
       "Email marketing platform designed for high-deliverability campaigns and automated sequences.",
     specs: ["Email", "Automation", "Infrastructure"],
+    logoUrl: "/images/logos/hg-email.png",
     website: "https://hg-email.com",
+    stats: [
+      { label: "Focus", value: "Deliverability" },
+      { label: "Type", value: "SaaS" },
+    ],
+    features: [
+      "High-Deliverability Engine",
+      "Automated Sequences",
+      "Campaign Management",
+      "Infrastructure Control",
+    ],
     color: "oklch(0.6 0.15 30)",
-    status: "Internal",
-    featured: false,
+    status: "Live",
+    featured: true,
   },
   {
     title: "Heaviside Tasks",

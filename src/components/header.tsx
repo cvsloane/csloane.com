@@ -18,6 +18,7 @@ export function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg supports-backdrop-filter:bg-background/60"
+      suppressHydrationWarning
     >
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="font-bold text-2xl hover:text-primary transition-colors">

@@ -10,7 +10,7 @@ export default function Home() {
       {/* Animated gradient background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 -left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-transparent blur-3xl"
+          className="absolute top-1/4 -left-1/4 w-96 h-96 rounded-full bg-linear-to-br from-blue-500/30 via-cyan-500/20 to-transparent blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -23,7 +23,7 @@ export default function Home() {
           }}
         />
         <motion.div
-          className="absolute top-1/3 -right-1/4 w-96 h-96 rounded-full bg-gradient-to-bl from-blue-500/30 via-purple-500/20 to-transparent blur-3xl"
+          className="absolute top-1/3 -right-1/4 w-96 h-96 rounded-full bg-linear-to-bl from-blue-600/30 via-blue-400/20 to-transparent blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             x: [0, -50, 0],
