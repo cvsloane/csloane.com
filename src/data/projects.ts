@@ -2,128 +2,126 @@ export interface Project {
   title: string;
   description: string;
   specs: string[];
+  logoUrl?: string;
+  website?: string;
+  stats?: { label: string; value: string }[];
+  features?: string[];
+  color?: string;
+  status?: string;
 }
 
 export const projects: Project[] = [
   // SaaS & Platforms
   {
+    title: "Agency Commander",
+    description:
+      "The financial command center for digital agencies. Gives complete visibility into sales, revenue, and profitability. Replaces spreadsheets with a real-time financial engine.",
+    specs: ["SaaS", "Financial Tech", "Dashboard"],
+    logoUrl: "https://logo.clearbit.com/agencycommander.co",
+    website: "https://agencycommander.co",
+    stats: [
+      { label: "Focus", value: "Profitability" },
+      { label: "Type", value: "SaaS" },
+    ],
+    features: [
+      "Complete Sales Visibility",
+      "Real-time Profitability Tracking",
+      "Actionable Financial Reports",
+      "Sales Forecasting",
+    ],
+    color: "oklch(0.45 0.15 240)", // Navy Blue
+    status: "Live",
+  },
+  {
+    title: "HG Content",
+    description:
+      "AI-powered content generation platform designed for modern businesses. Create, manage, and optimize content across multiple clients and campaigns with advanced AI assistance.",
+    specs: ["AI", "Content Ops", "SaaS"],
+    logoUrl: "https://logo.clearbit.com/hgcontent.com",
+    website: "https://hgcontent.com",
+    stats: [
+      { label: "Tech", value: "Advanced AI" },
+      { label: "Scale", value: "Enterprise" },
+    ],
+    features: [
+      "Multi-Client Management",
+      "SEO Optimization Built-in",
+      "Strategy & Tone Management",
+      "Real-time Processing",
+    ],
+    color: "oklch(0.6 0.2 300)", // Purple
+    status: "Live",
+  },
+  {
+    title: "HG SEO Commander",
+    description:
+      "Comprehensive SEO management platform for businesses of all sizes. Boost online presence and drive growth through data-driven insights and automated reporting.",
+    specs: ["SEO", "Automation", "Analytics"],
+    logoUrl: "https://logo.clearbit.com/hgseocommander.com",
+    website: "https://hgseocommander.com",
+    stats: [
+      { label: "Data", value: "Reliable" },
+      { label: "Security", value: "Enterprise" },
+    ],
+    features: [
+      "Comprehensive Reports",
+      "Industry-Specific Insights",
+      "User-Friendly Dashboard",
+      "Automated Analysis",
+    ],
+    color: "oklch(0.55 0.18 150)", // Green
+    status: "Live",
+  },
+  {
+    title: "HG Email",
+    description:
+      "Email marketing platform designed for high-deliverability campaigns and automated sequences. (Internal Tool/Platform)",
+    specs: ["Email", "Automation", "Infrastructure"],
+    logoUrl: "", // No logo available from failed URL
+    website: "https://hg-email.com",
+    stats: [
+      { label: "Type", value: "Infrastructure" },
+    ],
+    features: [
+      "High Deliverability",
+      "Automated Sequences",
+      "Campaign Management",
+    ],
+    color: "oklch(0.6 0.15 30)", // Red/Orange
+    status: "Internal",
+  },
+  {
     title: "Heaviside Platform",
     description:
       "Multi-tenant website platform for managing 50-100+ WordPress sites with modern technology, enterprise-grade security, and complete multi-tenant isolation.",
-    specs: ["Next.js 15", "Supabase", "TypeScript", "Multi-tenancy"],
+    specs: ["Next.js 15", "Supabase", "Multi-tenancy"],
+    stats: [
+      { label: "Scale", value: "100+ Sites" },
+      { label: "Tech", value: "Modern Stack" },
+    ],
+    features: [
+      "Complete Isolation",
+      "Enterprise Security",
+      "Centralized Management",
+    ],
+    color: "oklch(0.3 0.1 260)",
+    status: "Internal Platform",
   },
   {
     title: "FreightRail Pulse",
     description:
       "Real-time freight rail monitoring and visualization platform for the United States. Processes high-volume data streams to visualize network status.",
-    specs: ["Real-time Data", "Geospatial", "WebSocket", "Visualization"],
-  },
-  {
-    title: "Heaviside Tasks",
-    description:
-      "AI-powered task management Progressive Web App. Built with a local-first architecture to ensure instant responsiveness and offline capability.",
-    specs: ["PWA", "Local-First", "LLM Integration", "Offline Support"],
-  },
-  {
-    title: "HG Websites",
-    description:
-      "Multi-tenant marketing platform for Heaviside Group agencies, streamlining the deployment and management of niche-specific marketing sites.",
-    specs: ["Next.js", "React", "Marketing Automation"],
-  },
-  {
-    title: "Site2Next",
-    description:
-      "CLI tool to convert any public website to a Next.js application with preserved SEO and functional forms.",
-    specs: ["CLI", "Node.js", "AST Manipulation", "Migration Tool"],
-  },
-
-  // Agency Automation & Tools
-  {
-    title: "HG Market Report",
-    description:
-      "Automated market analysis tool that aggregates data to generate comprehensive reports for agency clients and internal strategy.",
-    specs: ["Data Aggregation", "Reporting", "Automation"],
-  },
-  {
-    title: "Agency Financials",
-    description:
-      "Internal financial tracking and reporting system designed for digital agency operations and forecasting.",
-    specs: ["Finance", "Reporting", "Internal Tool"],
-  },
-  {
-    title: "HG SEO Commander",
-    description:
-      "SEO automation suite for managing campaigns, tracking rankings, and auditing sites at scale.",
-    specs: ["Python", "SEO", "Automation", "Data Analysis"],
-  },
-  {
-    title: "Revenue Commander",
-    description:
-      "Revenue tracking and forecasting tool that integrates with CRM and accounting data to provide real-time business health metrics.",
-    specs: ["Python", "Data Pipelines", "Forecasting"],
-  },
-  {
-    title: "HG Leads Commander",
-    description:
-      "Lead generation automation tool that identifies and qualifies prospects across various channels.",
-    specs: ["Lead Gen", "Automation", "Scraping"],
-  },
-  {
-    title: "Heaviside Prospector",
-    description:
-      "Automated prospecting tool for identifying potential clients in specific niche markets.",
-    specs: ["Prospecting", "Data Mining", "Automation"],
-  },
-  {
-    title: "Outscraper GHL",
-    description:
-      "GoHighLevel Contact Sync Tool - Companion tool for Outscraper Tools pipeline that syncs business data to GoHighLevel CRM.",
-    specs: ["CRM Integration", "GoHighLevel", "Data Sync"],
-  },
-  {
-    title: "Outscraper Tools",
-    description:
-      "Utilities for processing and cleaning data scraped from various sources for marketing campaigns.",
-    specs: ["Data Processing", "ETL", "Python"],
-  },
-
-  // Plugins & Integrations
-  {
-    title: "Paving Plugin",
-    description:
-      "Industry-specific WordPress plugin designed for paving company websites, providing specialized functionality and schema.",
-    specs: ["WordPress", "PHP", "Plugin Dev"],
-  },
-  {
-    title: "Heaviside GBP",
-    description:
-      "Google Business Profile management tool for automating updates, posts, and review management across multiple locations.",
-    specs: ["Google API", "Automation", "Local SEO"],
-  },
-  {
-    title: "Heaviside SEO",
-    description:
-      "Core SEO utility library used across Heaviside Group projects for consistent meta tag generation and schema markup.",
-    specs: ["SEO", "Library", "TypeScript"],
-  },
-  {
-    title: "BWS Init",
-    description:
-      "CLI tool for initializing Bitwarden Secrets Manager in any project, streamlining secure environment variable management.",
-    specs: ["CLI", "Security", "Bitwarden"],
-  },
-
-  // Personal & Other
-  {
-    title: "Family Devotion",
-    description:
-      "Application for managing family spiritual activities and devotionals.",
-    specs: ["Personal", "React", "Mobile-First"],
-  },
-  {
-    title: "HG Content",
-    description:
-      "Content generation and management system for scaling agency content production.",
-    specs: ["Content Ops", "CMS", "Automation"],
+    specs: ["Real-time", "Geospatial", "WebSocket"],
+    stats: [
+      { label: "Data", value: "High-Volume" },
+      { label: "Type", value: "Real-time" },
+    ],
+    features: [
+      "Network Visualization",
+      "Live Data Streams",
+      "Geospatial Analysis",
+    ],
+    color: "oklch(0.4 0.15 200)",
+    status: "Project",
   },
 ];
