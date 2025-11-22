@@ -8,16 +8,17 @@ export interface Project {
   features?: string[];
   color?: string;
   status?: string;
+  featured?: boolean;
 }
 
 export const projects: Project[] = [
-  // SaaS & Platforms
+  // --- Featured Platforms (SaaS & Major Systems) ---
   {
     title: "Agency Commander",
     description:
       "The financial command center for digital agencies. Gives complete visibility into sales, revenue, and profitability. Replaces spreadsheets with a real-time financial engine.",
     specs: ["SaaS", "Financial Tech", "Dashboard"],
-    logoUrl: "https://logo.clearbit.com/agencycommander.co",
+    logoUrl: "/images/logos/agency-commander.png",
     website: "https://agencycommander.co",
     stats: [
       { label: "Focus", value: "Profitability" },
@@ -31,13 +32,14 @@ export const projects: Project[] = [
     ],
     color: "oklch(0.45 0.15 240)", // Navy Blue
     status: "Live",
+    featured: true,
   },
   {
     title: "HG Content",
     description:
       "AI-powered content generation platform designed for modern businesses. Create, manage, and optimize content across multiple clients and campaigns with advanced AI assistance.",
     specs: ["AI", "Content Ops", "SaaS"],
-    logoUrl: "https://logo.clearbit.com/hgcontent.com",
+    logoUrl: "", // No logo file
     website: "https://hgcontent.com",
     stats: [
       { label: "Tech", value: "Advanced AI" },
@@ -51,13 +53,14 @@ export const projects: Project[] = [
     ],
     color: "oklch(0.6 0.2 300)", // Purple
     status: "Live",
+    featured: true,
   },
   {
     title: "HG SEO Commander",
     description:
       "Comprehensive SEO management platform for businesses of all sizes. Boost online presence and drive growth through data-driven insights and automated reporting.",
     specs: ["SEO", "Automation", "Analytics"],
-    logoUrl: "https://logo.clearbit.com/hgseocommander.com",
+    logoUrl: "/images/logos/hg-seo-commander.png",
     website: "https://hgseocommander.com",
     stats: [
       { label: "Data", value: "Reliable" },
@@ -71,24 +74,7 @@ export const projects: Project[] = [
     ],
     color: "oklch(0.55 0.18 150)", // Green
     status: "Live",
-  },
-  {
-    title: "HG Email",
-    description:
-      "Email marketing platform designed for high-deliverability campaigns and automated sequences. (Internal Tool/Platform)",
-    specs: ["Email", "Automation", "Infrastructure"],
-    logoUrl: "", // No logo available from failed URL
-    website: "https://hg-email.com",
-    stats: [
-      { label: "Type", value: "Infrastructure" },
-    ],
-    features: [
-      "High Deliverability",
-      "Automated Sequences",
-      "Campaign Management",
-    ],
-    color: "oklch(0.6 0.15 30)", // Red/Orange
-    status: "Internal",
+    featured: true,
   },
   {
     title: "Heaviside Platform",
@@ -106,6 +92,7 @@ export const projects: Project[] = [
     ],
     color: "oklch(0.3 0.1 260)",
     status: "Internal Platform",
+    featured: true,
   },
   {
     title: "FreightRail Pulse",
@@ -123,5 +110,123 @@ export const projects: Project[] = [
     ],
     color: "oklch(0.4 0.15 200)",
     status: "Project",
+    featured: true,
+  },
+
+  // --- Other Technical Work (Restored) ---
+  {
+    title: "HG Email",
+    description:
+      "Email marketing platform designed for high-deliverability campaigns and automated sequences.",
+    specs: ["Email", "Automation", "Infrastructure"],
+    website: "https://hg-email.com",
+    color: "oklch(0.6 0.15 30)",
+    status: "Internal",
+    featured: false,
+  },
+  {
+    title: "Heaviside Tasks",
+    description:
+      "AI-powered task management Progressive Web App. Built with a local-first architecture to ensure instant responsiveness and offline capability.",
+    specs: ["PWA", "Local-First", "LLM Integration", "Offline Support"],
+    featured: false,
+  },
+  {
+    title: "HG Websites",
+    description:
+      "Multi-tenant marketing platform for Heaviside Group agencies, streamlining the deployment and management of niche-specific marketing sites.",
+    specs: ["Next.js", "React", "Marketing Automation"],
+    featured: false,
+  },
+  {
+    title: "Site2Next",
+    description:
+      "CLI tool to convert any public website to a Next.js application with preserved SEO and functional forms.",
+    specs: ["CLI", "Node.js", "AST Manipulation", "Migration Tool"],
+    featured: false,
+  },
+  {
+    title: "HG Market Report",
+    description:
+      "Automated market analysis tool that aggregates data to generate comprehensive reports for agency clients and internal strategy.",
+    specs: ["Data Aggregation", "Reporting", "Automation"],
+    featured: false,
+  },
+  {
+    title: "Agency Financials",
+    description:
+      "Internal financial tracking and reporting system designed for digital agency operations and forecasting.",
+    specs: ["Finance", "Reporting", "Internal Tool"],
+    featured: false,
+  },
+  {
+    title: "Revenue Commander",
+    description:
+      "Revenue tracking and forecasting tool that integrates with CRM and accounting data to provide real-time business health metrics.",
+    specs: ["Python", "Data Pipelines", "Forecasting"],
+    featured: false,
+  },
+  {
+    title: "HG Leads Commander",
+    description:
+      "Lead generation automation tool that identifies and qualifies prospects across various channels.",
+    specs: ["Lead Gen", "Automation", "Scraping"],
+    featured: false,
+  },
+  {
+    title: "Heaviside Prospector",
+    description:
+      "Automated prospecting tool for identifying potential clients in specific niche markets.",
+    specs: ["Prospecting", "Data Mining", "Automation"],
+    featured: false,
+  },
+  {
+    title: "Outscraper GHL",
+    description:
+      "GoHighLevel Contact Sync Tool - Companion tool for Outscraper Tools pipeline that syncs business data to GoHighLevel CRM.",
+    specs: ["CRM Integration", "GoHighLevel", "Data Sync"],
+    featured: false,
+  },
+  {
+    title: "Outscraper Tools",
+    description:
+      "Utilities for processing and cleaning data scraped from various sources for marketing campaigns.",
+    specs: ["Data Processing", "ETL", "Python"],
+    featured: false,
+  },
+  {
+    title: "Paving Plugin",
+    description:
+      "Industry-specific WordPress plugin designed for paving company websites, providing specialized functionality and schema.",
+    specs: ["WordPress", "PHP", "Plugin Dev"],
+    featured: false,
+  },
+  {
+    title: "Heaviside GBP",
+    description:
+      "Google Business Profile management tool for automating updates, posts, and review management across multiple locations.",
+    specs: ["Google API", "Automation", "Local SEO"],
+    featured: false,
+  },
+  {
+    title: "Heaviside SEO",
+    description:
+      "Core SEO utility library used across Heaviside Group projects for consistent meta tag generation and schema markup.",
+    specs: ["SEO", "Library", "TypeScript"],
+    featured: false,
+  },
+  {
+    title: "BWS Init",
+    description:
+      "CLI tool for initializing Bitwarden Secrets Manager in any project, streamlining secure environment variable management.",
+    specs: ["CLI", "Security", "Bitwarden"],
+    featured: false,
+  },
+  {
+    title: "Family Devotion",
+    description:
+      "Application for managing family spiritual activities and devotionals.",
+    specs: ["Personal", "React", "Mobile-First"],
+    featured: false,
   },
 ];

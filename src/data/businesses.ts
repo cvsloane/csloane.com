@@ -4,7 +4,7 @@ export interface Business {
     year: string;
     website: string;
     tags: string[];
-    logoUrl: string;
+    logoUrl?: string; // Optional, falls back to initials/icon
     stats: { label: string; value: string }[];
     features: string[];
     color: string;
@@ -17,7 +17,7 @@ export const businesses: Business[] = [
         year: "Founded 2010",
         website: "https://heaviside.digital",
         tags: ["Digital Marketing", "SEO", "Web Development"],
-        logoUrl: "https://logo.clearbit.com/heaviside.digital",
+        logoUrl: "/images/logos/heaviside-digital.png",
         stats: [
             { label: "Reviews", value: "500+" },
             { label: "Experience", value: "14 Years" },
@@ -36,9 +36,9 @@ export const businesses: Business[] = [
         year: "Launched 2020",
         website: "https://pavingmarketers.com",
         tags: ["Niche Marketing", "Paving Industry"],
-        logoUrl: "https://logo.clearbit.com/pavingmarketers.com",
+        logoUrl: "/images/logos/paving-marketers.png",
         stats: [
-            { label: "Clients", value: "1,000+" }, // Based on "1000+ customers across parent company" context, or specific paving stats if available. Using general scale.
+            { label: "Clients", value: "1,000+" },
             { label: "Rating", value: "#1 Agency" },
         ],
         features: [
@@ -55,7 +55,7 @@ export const businesses: Business[] = [
         year: "Launched 2022",
         website: "https://garagedoormarketers.com",
         tags: ["Niche Marketing", "Garage Door Industry"],
-        logoUrl: "https://logo.clearbit.com/garagedoormarketers.com",
+        logoUrl: "/images/logos/garage-door-marketers.png",
         stats: [
             { label: "Growth", value: "Rapid" },
             { label: "Focus", value: "100% Niche" },
@@ -74,7 +74,7 @@ export const businesses: Business[] = [
         year: "Launched 2023",
         website: "https://electricianmarketingagency.com",
         tags: ["Niche Marketing", "Electrician Industry"],
-        logoUrl: "https://logo.clearbit.com/electricianmarketingagency.com",
+        logoUrl: "/images/logos/electrician-marketing-agency.png",
         stats: [
             { label: "Experience", value: "10+ Years" },
             { label: "Specialty", value: "Electrical" },
@@ -93,7 +93,7 @@ export const businesses: Business[] = [
         year: "Training Platform",
         website: "https://digitalagencygrowthacademy.com",
         tags: ["Education", "Agency Training"],
-        logoUrl: "https://logo.clearbit.com/digitalagencygrowthacademy.com",
+        logoUrl: "", // No logo file available yet
         stats: [
             { label: "Growth", value: "$1.3M ARR" },
             { label: "Steps", value: "9 Proven" },
