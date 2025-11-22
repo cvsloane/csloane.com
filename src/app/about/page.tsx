@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import { Github, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About",
-};
-
 export default function AboutPage() {
     return (
         <div className="container py-12 md:py-24">

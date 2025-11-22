@@ -16,12 +16,6 @@ declare global {
   }
 }
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Contact",
-};
-
 export default function ContactPage() {
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const [name, setName] = useState("");

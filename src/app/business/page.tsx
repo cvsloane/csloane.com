@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import { businesses } from "@/data/businesses";
 import { FeatureSection } from "@/components/FeatureSection";
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Business",
-};
-
 export default function BusinessPage() {
     return (
         <div className="container py-12">

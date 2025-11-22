@@ -6,12 +6,6 @@ import { GitHubGraph } from "@/components/GitHubGraph";
 import { FeatureSection } from "@/components/FeatureSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Projects",
-};
-
 export default function ProjectsPage() {
   const featuredProjects = projects.filter(p => p.featured);
   const otherProjects = projects.filter(p => !p.featured);
