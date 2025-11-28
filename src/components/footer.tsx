@@ -1,9 +1,63 @@
 import Link from "next/link";
+import type { SVGProps } from "react";
+import { Github } from "lucide-react";
+
+const SubstackIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    aria-hidden
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M4 6h16"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <rect
+      x="4"
+      y="9"
+      width="16"
+      height="9"
+      rx="1.5"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <path
+      d="M4 9.5l8 4.5 8-4.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const XIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    aria-hidden
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M18 6 6 18M6 6l12 12"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/cvsloane" },
-  { name: "Substack", href: "https://cvsloane.substack.com" },
-  { name: "Twitter", href: "https://twitter.com/cvsloane" },
+  { name: "GitHub", href: "https://github.com/cvsloane", icon: Github },
+  { name: "Substack", href: "https://cvsloane.substack.com", icon: SubstackIcon },
+  { name: "X", href: "https://x.com/csloane", icon: XIcon },
 ];
 
 export function Footer() {
@@ -14,18 +68,23 @@ export function Footer() {
           &copy; {new Date().getFullYear()} cvsloane. All rights reserved.
         </div>
         <div className="flex items-center gap-6">
-          {socialLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-muted-foreground transition-all hover:text-foreground hover:scale-110 relative group"
-            >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-            </Link>
-          ))}
+          {socialLinks.map((link) => {
+            const Icon = link.icon;
+
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.name}
+                className="p-2 text-muted-foreground transition-transform hover:text-foreground hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 rounded-full"
+              >
+                <Icon className="h-5 w-5" />
+                <span className="sr-only">{link.name}</span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </footer>
